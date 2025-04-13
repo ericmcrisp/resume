@@ -1,0 +1,29 @@
+name: Build and Deploy Resume
+
+on:
+  push:
+    branches: [master]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout source
+        uses: actions/checkout@v3
+
+      - name: Compile LaTeX resume
+        uses: dante-ev/latex-action@v2
+        with:
+          root_file: custom.tex
+
+      - name: Copy PDF to deploy dir
+        run: |
+          mkdir public
+          cp custom.pdf public/
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./public
+          publish_branch: gh-pages
