@@ -1,8 +1,8 @@
-PWD /Users/admin/Documents/resume/custom
+PWD /Users/admin/repos/github/pages/tex
 INPUT /usr/local/texlive/2024/texmf.cnf
 INPUT /usr/local/texlive/2024/texmf-dist/web2c/texmf.cnf
 INPUT /usr/local/texlive/2024/texmf-var/web2c/pdftex/pdflatex.fmt
-INPUT /Users/admin/Documents/resume/custom/custom.tex
+INPUT /Users/admin/repos/github/pages/tex/custom.tex
 OUTPUT custom.log
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/base/article.cls
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/base/article.cls
